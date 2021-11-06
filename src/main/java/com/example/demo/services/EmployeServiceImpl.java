@@ -50,16 +50,16 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	@Override
-	public void deleteEmploye(int id) {
+	public void deleteEmploye(String id) {
 		l.info("In of Method deleteEmploye");	
-		employeRepository.deleteById(id); 
+		employeRepository.deleteById(Long.parseLong(id)); 
 		l.info("Out of Method deleteEmploye with Success");
 	}
 
 	@Override
-	public Employe retrieveEmploye(int id) {
+	public Employe retrieveEmploye(String id) {
 		l.info("In of Method retrieveEmploye");		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
-		Employe e =  employeRepository.findById(id).get(); 
+		Employe e =  employeRepository.findById(Long.parseLong(id)).get(); 
 		l.info("Out of Method retrieveEmploye with Success");
 		return e; 
 	}

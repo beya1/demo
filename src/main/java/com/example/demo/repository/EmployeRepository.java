@@ -6,6 +6,6 @@ import com.example.demo.entites.Employe;
 
 
 @Repository
-public interface EmployeRepository extends CrudRepository<Employe,Integer> {
+public interface EmployeRepository extends CrudRepository<Employe,Long> {
 	
 }
