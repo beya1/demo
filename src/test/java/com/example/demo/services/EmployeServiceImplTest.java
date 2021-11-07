@@ -26,7 +26,7 @@ public class EmployeServiceImplTest {
 	@Order(1)
 	public void testRetrieveAllEmployes() {
 		List<Employe> listEmployes = us.retrieveAllEmployes();
-		Assertions.assertEquals(1, listEmployes.size());
+		Assertions.assertEquals(0, listEmployes.size());
 		}
 	
 	@Test
@@ -48,8 +48,8 @@ public class EmployeServiceImplTest {
 	@Test
 	@Order(4)
 	public void testRetrieveEmploye() throws ParseException {
-		Employe employeRetrieved = us.retrieveEmploye("2");
-		Assertions.assertEquals(2, employeRetrieved.getId());
+		Employe employeRetrieved = us.retrieveEmploye("1");
+		Assertions.assertEquals(1L, employeRetrieved.getId());
 	}
 	
 //	@Test
