@@ -58,14 +58,14 @@ public class UserServiceImplTest {
 		
 	}
 	
-	//@Test
-	//@Order(5)
-	//public void testDeleteUser() {
-		//us.deleteUser("19");
-		//Assertions.assertNull(us.retrieveUser("20"));
+	@Test
+	@Order(5)
+	public void testDeleteUser() {
+		us.deleteUser("1");
+		Assertions.assertNull(us.retrieveUser("1"));
 		
 	//}
 	
 	
-	
+	}
 }
