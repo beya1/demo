@@ -24,7 +24,7 @@ public class UserServiceImplTest {
 	@Order(1)
 	public void testRetrieveAllUsers() {
 	List<User> listUsers = us.retrieveAllUsers();
-	Assertions.assertEquals(0,listUsers.size());
+	Assertions.assertEquals(1,listUsers.size());
 	}
 	
 	@Test
@@ -53,8 +53,8 @@ public class UserServiceImplTest {
 	@Test
 	@Order(4)
 	public void testRetriveUser() {
-		User userRetrived = us.retrieveUser("1");
-		Assertions.assertEquals(1,userRetrived.getId());
+		User userRetrived = us.retrieveUser("2");
+		Assertions.assertEquals(2,userRetrived.getId());
 		
 	}
 	
